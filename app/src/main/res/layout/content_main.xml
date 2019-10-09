@@ -41,7 +41,7 @@
                     android:id="@+id/search_activity_content"
                     android:layout_width="350dp"
                     android:layout_height="45dp"
-                    android:text="Cari lokasi properti impian.."
+                    android:hint="Cari lokasi properti impian.."
                     android:textSize="14sp"
                     android:paddingStart="45dp"
                     android:textColor="#BFBDBD"
@@ -70,10 +70,23 @@
                     android:orientation="vertical"
                     android:layout_marginRight="20dp">
 
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:src="@drawable/iconrumah"/>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/rippleicon"
+                            android:stateListAnimator="@null" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:src="@drawable/houseicon" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="match_parent"
@@ -93,16 +106,29 @@
                     android:orientation="vertical"
                     android:layout_marginRight="20dp">
 
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:src="@drawable/iconrumah"/>
+                    <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:layout_width="70dp"
+                            android:layout_height="70dp"
+                            android:background="@drawable/rippleicon"
+                            android:stateListAnimator="@null" />
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_horizontal|center_vertical"
+                            android:src="@drawable/rukoicon" />
+
+                    </FrameLayout>
 
                     <TextView
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:textAlignment="center"
-                        android:text="Rumah"
+                        android:text="Ruko"
                         android:textSize="14sp"
                         android:textColor="@color/texticon"
                         fontPath="font/TitilliumWeb-SemiBold.ttf"
@@ -110,51 +136,6 @@
 
                 </LinearLayout>
 
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginRight="20dp">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:src="@drawable/iconrumah"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Rumah"
-                        android:textSize="14sp"
-                        android:textColor="@color/texticon"
-                        fontPath="font/TitilliumWeb-SemiBold.ttf"
-                        tools:ignore="MissingPrefix"/>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical"
-                    android:layout_marginRight="20dp">
-
-                    <ImageView
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:src="@drawable/iconrumah"/>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:textAlignment="center"
-                        android:text="Rumah"
-                        android:textSize="14sp"
-                        android:textColor="@color/texticon"
-                        fontPath="font/TitilliumWeb-SemiBold.ttf"
-                        tools:ignore="MissingPrefix"/>
-
-                </LinearLayout>
 
             </LinearLayout>
 
@@ -162,7 +143,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:layout_marginTop="20dp">
+                android:layout_marginTop="30dp">
 
                 <TextView
                     android:layout_width="wrap_content"
@@ -172,6 +153,37 @@
                     android:textColor="@color/headingone"
                     fontPath="font/TitilliumWeb-Bold.ttf"
                     tools:ignore="MissingPrefix"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/rk"
+                        fontPath="font/TitilliumWeb-Regular.ttf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:text="Rekomendasi"
+                        android:textColor="@color/headingone"
+                        android:textSize="18sp"
+                        tools:ignore="MissingPrefix" />
+
+                    <TextView
+                        android:id="@+id/rekomendasi"
+                        fontPath="font/TitilliumWeb-SemiBold.ttf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:layout_toRightOf="@id/rk"
+                        android:paddingRight="20dp"
+                        android:text="Lainnya"
+                        android:textAlignment="textEnd"
+                        android:textColor="@color/basecolor"
+                        android:textSize="18sp"
+                        tools:ignore="MissingPrefix" />
+
+                </RelativeLayout>
 
 
             </LinearLayout>
