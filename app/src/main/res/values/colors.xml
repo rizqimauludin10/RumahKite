@@ -9,6 +9,7 @@
     <color name="basecolor">#2ECA6A</color>
     <color name="texticon">#00BA56</color>
     <color name="tittlebar">#484848</color>
+    <color name="text">#484848</color>
     <color name="search">#878787</color>
     <color name="headingone">#484848</color>
 </resources>
