@@ -32,4 +32,5 @@ dependencies {
     //UI/UX
     implementation 'com.google.android.material:material:1.1.0-alpha07'
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
+    implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
 }
