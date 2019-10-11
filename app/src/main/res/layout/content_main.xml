@@ -19,49 +19,58 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:paddingLeft="20dp"
             android:layout_marginTop="20dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Mau Cari Property Dimane ?"
-                android:textSize="20sp"
-                android:textColor="@color/headingone"
-                fontPath="font/TitilliumWeb-Bold.ttf"
-                tools:ignore="MissingPrefix"/>
-
-            <FrameLayout
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="10dp">
+                android:orientation="vertical"
+                android:paddingLeft="20dp">
 
-                <EditText
-                    android:inputType="text"
-                    android:id="@+id/search_activity_content"
-                    android:layout_width="350dp"
-                    android:layout_height="45dp"
-                    android:hint="Cari lokasi properti impian.."
-                    android:textSize="14sp"
-                    android:paddingStart="45dp"
-                    android:textColor="#BFBDBD"
-                    android:background="@drawable/searchedittext"
-                    fontPath="font/TitilliumWeb-Regular.ttf"
-                    tools:ignore="MissingPrefix"/>
 
-                <ImageView
+                <TextView
+                    fontPath="font/TitilliumWeb-Bold.ttf"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="center_vertical"
-                    android:layout_marginStart="15dp"
-                    android:src="@drawable/searchicon" />
+                    android:text="Mau Cari Property Dimane ?"
+                    android:textColor="@color/headingone"
+                    android:textSize="20sp"
+                    tools:ignore="MissingPrefix"/>
 
-            </FrameLayout>
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp">
+
+                    <EditText
+                        android:id="@+id/search_activity_content"
+                        fontPath="font/TitilliumWeb-Regular.ttf"
+                        android:layout_width="350dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/searchedittext"
+                        android:hint="Cari lokasi properti impian.."
+                        android:inputType="text"
+                        android:paddingStart="45dp"
+                        android:textColor="#BFBDBD"
+                        android:textSize="14sp"
+                        tools:ignore="MissingPrefix"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="15dp"
+                        android:src="@drawable/searchicon" />
+
+                </FrameLayout>
+
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
+                android:paddingLeft="20dp"
                 android:orientation="horizontal">
 
                 <LinearLayout
@@ -94,7 +103,7 @@
                         android:textAlignment="center"
                         android:text="Rumah"
                         android:textSize="14sp"
-                        android:textColor="@color/texticon"
+                        android:textColor="@color/text"
                         fontPath="font/TitilliumWeb-SemiBold.ttf"
                         tools:ignore="MissingPrefix"/>
 
@@ -130,7 +139,7 @@
                         android:textAlignment="center"
                         android:text="Ruko"
                         android:textSize="14sp"
-                        android:textColor="@color/texticon"
+                        android:textColor="@color/text"
                         fontPath="font/TitilliumWeb-SemiBold.ttf"
                         tools:ignore="MissingPrefix"/>
 
@@ -167,7 +176,7 @@
                         android:layout_height="wrap_content"
                         android:text="Tanah"
                         android:textAlignment="center"
-                        android:textColor="@color/texticon"
+                        android:textColor="@color/text"
                         android:textSize="14sp"
                         tools:ignore="MissingPrefix" />
 
@@ -204,7 +213,7 @@
                         android:layout_height="wrap_content"
                         android:text="Tukang"
                         android:textAlignment="center"
-                        android:textColor="@color/texticon"
+                        android:textColor="@color/text"
                         android:textSize="14sp"
                         tools:ignore="MissingPrefix" />
 
@@ -215,6 +224,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:paddingLeft="20dp"
                 android:layout_marginTop="30dp">
 
                 <TextView
@@ -249,7 +259,7 @@
                         android:text="Lainnya"
                         android:textAlignment="textEnd"
                         android:textColor="@color/basecolor"
-                        android:textSize="18sp"
+                        android:textSize="14sp"
                         fontPath="font/TitilliumWeb-SemiBold.ttf"
                         tools:ignore="MissingPrefix" />
 
@@ -262,6 +272,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
                 android:orientation="vertical">
 
                 <HorizontalScrollView
@@ -332,6 +343,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
+                android:paddingLeft="20dp"
                 android:layout_marginTop="20dp">
 
 
@@ -357,7 +369,7 @@
                         android:text="Lainnya"
                         android:textAlignment="textEnd"
                         android:textColor="@color/basecolor"
-                        android:textSize="18sp"
+                        android:textSize="14sp"
                         fontPath="font/TitilliumWeb-SemiBold.ttf"
                         tools:ignore="MissingPrefix" />
 
@@ -370,6 +382,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
+                android:paddingLeft="20dp"
                 android:orientation="vertical">
 
                 <HorizontalScrollView
@@ -428,6 +441,7 @@
 
                         </LinearLayout>
 
+
                     </LinearLayout>
 
 
@@ -435,8 +449,47 @@
 
             </LinearLayout>
 
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="@drawable/news_bg"
+                android:orientation="vertical"
+                android:layout_marginTop="30dp"
+                android:paddingTop="20dp"
+                android:paddingLeft="20dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/newsone"
+                            android:scaleType="centerCrop"/>
+
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Asyik Memanjakan Diri di Rumah"
+                        android:maxLines="2"
+                        android:ems="10"/>
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
 
         </LinearLayout>
+
 
     </androidx.core.widget.NestedScrollView>
 

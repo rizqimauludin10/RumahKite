@@ -12,6 +12,8 @@
     <color name="text">#484848</color>
     <color name="search">#878787</color>
     <color name="headingone">#484848</color>
+    <color name="newsgradone">#33D980</color>
+    <color name="newsgradtwo">#009143</color>
 
 
 </resources>
