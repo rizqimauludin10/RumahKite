@@ -46,7 +46,7 @@ public class ListHomeAdapter extends RecyclerView.Adapter<ListHomeAdapter.ListVi
                 .into(holder.imgHome);
         holder.tvType.setText(home.getType_home());
         holder.tvPrice.setText(home.getHarga());
-//        holder.tvDesc.setText(home.getDeskripsi());
+        holder.tvDesc.setText(home.getDeskripsi());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -69,6 +69,7 @@ public class ListHomeAdapter extends RecyclerView.Adapter<ListHomeAdapter.ListVi
                 imgHome = itemView.findViewById(R.id.img_item_photo);
                 tvType = itemView.findViewById(R.id.type);
                 tvPrice = itemView.findViewById(R.id.tv_harga);
+                tvDesc = itemView.findViewById(R.id.tv_deskripsi);
             }
     }
 

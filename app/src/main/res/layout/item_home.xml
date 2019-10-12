@@ -35,5 +35,19 @@
             android:ellipsize="end"
             android:maxLines="2"
             tools:text="Harga" />
+
+
+
+
+
     </LinearLayout>
+
+        <TextView
+            android:visibility="gone"
+            android:layout_marginLeft="200dp"
+            android:id="@+id/tv_deskripsi"
+            android:text="tessssssssssss"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
 </RelativeLayout>

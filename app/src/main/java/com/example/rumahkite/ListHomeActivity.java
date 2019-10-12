@@ -4,12 +4,15 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
 
 import java.util.ArrayList;
 
 public class ListHomeActivity extends AppCompatActivity {
+
+
 
     private RecyclerView rvHome;
     private ArrayList<Home> list = new ArrayList<>();
@@ -35,12 +38,17 @@ public class ListHomeActivity extends AppCompatActivity {
         listHomeAdapter.setOnItemClickCallBack(new ListHomeAdapter.OnItemClickCallBack() {
             @Override
             public void onItemClicked(Home data) {
-                showSelectedHome(data);
+                Intent intent = new Intent(ListHomeActivity.this, DetailActivity.class);
+                intent.putExtra(DetailActivity.EXTRA_TYPE, data.getType_home());
+                intent.putExtra(DetailActivity.EXTRA_PRICE, data.getHarga());
+                intent.putExtra(DetailActivity.EXTRA_DESC, data.getDeskripsi());
+                intent.putExtra(DetailActivity.EXTRA_PIC, data.getFoto());
+                startActivity(intent);
             }
         });
     }
 
-    private void showSelectedHome(Home home) {
-        Toast.makeText(this, "Kau Menyentuh " + home.getType_home(),Toast.LENGTH_LONG).show();
-    }
+//    private void showSelectedHome(Home home) {
+//        Toast.makeText(this, "Kau Menyentuh " + home.getType_home(),Toast.LENGTH_LONG).show();
+//    }
 }
