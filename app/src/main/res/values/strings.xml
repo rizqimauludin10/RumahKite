@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">RumahKite</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_listhome">ListHome</string>
+    <string name="title_activity_detailhome">DetailHome</string>
     <string name="geofence_unknown_error">
         Unknown error: the Geofence service is not available now.
     </string>

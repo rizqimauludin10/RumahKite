@@ -33,6 +33,14 @@
             android:name=".MapsActivity"
             android:label="@string/title_activity_maps"></activity>
 
+        <activity
+        android:name=".ListHomeActivity"
+        android:label="@string/title_activity_listhome"></activity>
+
+        <activity
+            android:name=".DetailActivity"
+            android:label="@string/title_activity_detailhome"></activity>
+
     </application>
 
 </manifest>

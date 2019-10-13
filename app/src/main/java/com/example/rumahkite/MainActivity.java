@@ -1,5 +1,16 @@
 package com.example.rumahkite;
 
+import android.content.Context;
+import android.content.Intent;
+import android.os.Bundle;
+import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.TextView;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,24 +18,14 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 import androidx.viewpager.widget.ViewPager;
 
-import android.content.Context;
-import android.graphics.Bitmap;
-import android.graphics.BitmapShader;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.RectF;
-import android.graphics.Shader;
-import android.graphics.drawable.BitmapDrawable;
-import android.os.Bundle;
-import android.os.Handler;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.widget.ImageView;
-
 import com.example.rumahkite.adapter.CarouselImageAdapter;
+import com.example.rumahkite.adapter.NewsAdapter;
 import com.example.rumahkite.model.CarouselImage;
+import com.example.rumahkite.model.CarouselNews;
 import com.google.android.material.appbar.CollapsingToolbarLayout;
 import com.google.android.material.navigation.NavigationView;
 import com.viewpagerindicator.CirclePageIndicator;
@@ -38,14 +39,34 @@ import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
     private static ViewPager mPager;
+    private static ViewPager mPagerNews;
     private static int currentPage = 0;
     private static int NUM_PAGES = 0;
+    private static int NUM_PAGES_NEWS = 0;
     private ArrayList<CarouselImage> carouselImageArrayList;
+
+    private RecyclerView recyclerView;
+    private ArrayList<CarouselNews> carouselNewsArrayList;
+    private NewsAdapter newsAdapter;
+
+
+    private Button Bthome;
+    Intent intent;
 
     private int[] myImageList = new int[]{
             R.drawable.promo,
             R.drawable.promo2,
             R.drawable.promo3
+    };
+
+    private int[] myNewsList = new int[]{
+            R.drawable.newsone,
+            R.drawable.newstwo
+    };
+
+    private String[] myHeaderList = new String[]{
+            "Asyik Memanjakan Diri di Rumah",
+            "Rumah Nyaman dan Adem"
     };
 
     @Override
@@ -56,8 +77,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setTitle("");
-
-        //ImageView imageView = (ImageView) findViewById(R.id.rekomenimage);
 
         DrawerLayout drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
@@ -75,8 +94,38 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         carouselImageArrayList = new ArrayList<>();
         carouselImageArrayList = populateList();
 
+        recyclerView = (RecyclerView) findViewById(R.id.rvNews);
+        carouselNewsArrayList = carouselNews();
+        newsAdapter = new NewsAdapter(this, carouselNewsArrayList);
+        recyclerView.setAdapter(newsAdapter);
+        recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
+
+        TextView tvRek = findViewById(R.id.rekomendasi);
+        Bthome = (Button) findViewById(R.id.homeBt);
+
+
         init();
 
+        Bthome.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(MainActivity.this, ListHomeActivity.class);
+                startActivity(intent);
+            }
+        });
+    }
+
+    private ArrayList<CarouselNews> carouselNews() {
+        ArrayList<CarouselNews> newsArrayList = new ArrayList<>();
+
+        for (int i = 0; i < 2; i++) {
+            CarouselNews carouselNews = new CarouselNews();
+            carouselNews.setImage(myNewsList[i]);
+            carouselNews.setHeader(myHeaderList[i]);
+            newsArrayList.add(carouselNews);
+        }
+
+        return newsArrayList;
     }
 
     private ArrayList<CarouselImage> populateList(){
@@ -90,6 +139,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         return list;
     }
 
+
     private void init(){
         mPager = (ViewPager) findViewById(R.id.pager);
         mPager.setAdapter(new CarouselImageAdapter(MainActivity.this, carouselImageArrayList));
@@ -102,6 +152,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         indicator.setRadius(4*density);
 
         NUM_PAGES = carouselImageArrayList.size();
+
         final Handler handler = new Handler();
         final Runnable runnable = new Runnable() {
             @Override
@@ -178,4 +229,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     protected void attachBaseContext(Context newBase) {
         super.attachBaseContext(CalligraphyContextWrapper.wrap(newBase));
     }
+
+
 }
