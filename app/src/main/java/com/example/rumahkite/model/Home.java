@@ -1,4 +1,4 @@
-package com.example.rumahkite;
+package com.example.rumahkite.model;
 
 public class Home {
     private String type_home;

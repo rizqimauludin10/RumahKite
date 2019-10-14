@@ -6,7 +6,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.widget.Toast;
+
+import com.example.rumahkite.adapter.ListHomeAdapter;
+import com.example.rumahkite.model.Home;
 
 import java.util.ArrayList;
 
