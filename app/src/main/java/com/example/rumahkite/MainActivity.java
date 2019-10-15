@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Bthome.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(MainActivity.this, ListHomeActivity.class);
+                intent = new Intent(MainActivity.this, TabsActivity.class);
                 startActivity(intent);
             }
         });

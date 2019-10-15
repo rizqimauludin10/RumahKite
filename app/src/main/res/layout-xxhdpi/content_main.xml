@@ -54,7 +54,7 @@
                         android:hint="Cari lokasi properti impian.."
                         android:inputType="text"
                         android:paddingStart="45dp"
-                        android:textColor="#BFBDBD"
+                        android:textColor="#787878"
                         android:textSize="14sp"
                         tools:ignore="MissingPrefix"/>
 

@@ -1,4 +1,4 @@
-package com.example.rumahkite;
+package com.example.rumahkite.model;
 
 public class Home {
     private String type_home;
@@ -13,8 +13,6 @@ public class Home {
     public void setDeskripsi(String deskripsi) {
         this.deskripsi = deskripsi;
     }
-
-
 
     public String getType_home() {
         return type_home;

@@ -1,4 +1,4 @@
-package com.example.rumahkite;
+package com.example.rumahkite.adapter;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,8 +11,9 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.request.RequestOptions;
+import com.example.rumahkite.model.Home;
+import com.example.rumahkite.R;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class ListHomeAdapter extends RecyclerView.Adapter<ListHomeAdapter.ListViewHolder> {

@@ -1,5 +1,7 @@
 package com.example.rumahkite;
 
+import com.example.rumahkite.model.Home;
+
 import java.util.ArrayList;
 
 public class HomeDummy {
