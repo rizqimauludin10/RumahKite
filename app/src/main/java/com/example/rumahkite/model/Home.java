@@ -14,8 +14,6 @@ public class Home {
         this.deskripsi = deskripsi;
     }
 
-
-
     public String getType_home() {
         return type_home;
     }
