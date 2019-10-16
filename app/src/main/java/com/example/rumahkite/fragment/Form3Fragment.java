@@ -13,13 +13,12 @@ import com.example.rumahkite.R;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-public class FormFragment extends Fragment implements Step {
+public class Form3Fragment extends Fragment implements Step {
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.form1_fragment, container, false);
-
+        return inflater.inflate(R.layout.form3_fragment, container, false);
     }
 
     @Nullable

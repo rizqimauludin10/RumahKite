@@ -11,6 +11,8 @@
     tools:context=".TukangFormActivity"
     android:background="@color/white"
     app:ms_showBottomNavigation="true"
+    app:ms_stepperFeedbackType="tabs"
+    app:ms_activeStepColor="@color/basecolor"
     app:ms_stepperType="tabs">
 
 
