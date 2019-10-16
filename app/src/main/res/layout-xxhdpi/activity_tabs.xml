@@ -44,7 +44,7 @@
                 android:layout_height="wrap_content"
                 android:src="@drawable/searchicon"
                 android:layout_gravity="center_vertical"
-                android:layout_marginLeft="15dp"/>
+                android:layout_marginLeft="15dp" />
         </FrameLayout>
 
 

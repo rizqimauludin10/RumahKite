@@ -50,7 +50,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private NewsAdapter newsAdapter;
 
 
-    private Button Bthome;
+    private Button Bthome, Bttukang;
     Intent intent;
 
     private int[] myImageList = new int[]{
@@ -101,7 +101,8 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext(), LinearLayoutManager.HORIZONTAL, false));
 
         TextView tvRek = findViewById(R.id.rekomendasi);
-        Bthome = (Button) findViewById(R.id.homeBt);
+        Bthome = findViewById(R.id.homeBt);
+        Bttukang = findViewById(R.id.bttukang);
 
 
         init();
@@ -109,7 +110,15 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
         Bthome.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View view) {
-                intent = new Intent(MainActivity.this, TabsActivity.class);
+                intent = new Intent(MainActivity.this, ListHomeActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Bttukang.setOnClickListener(new OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                intent = new Intent(MainActivity.this, TukangActivity.class);
                 startActivity(intent);
             }
         });
