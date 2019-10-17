@@ -38,4 +38,5 @@ dependencies {
     implementation 'uk.co.chrisjenx:calligraphy:2.3.0'
     implementation 'com.github.JakeWharton:ViewPagerIndicator:2.4.1'
     implementation 'com.stepstone.stepper:material-stepper:4.3.1'
+    implementation 'com.uncopt:android.justified:1.0'
 }
