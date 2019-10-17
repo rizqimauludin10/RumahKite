@@ -10,18 +10,19 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.example.rumahkite.R;
-import com.google.android.gms.maps.GoogleMap;
-import com.google.android.gms.maps.OnMapReadyCallback;
 import com.stepstone.stepper.Step;
 import com.stepstone.stepper.VerificationError;
 
-public class Form2Fragment extends Fragment implements Step , OnMapReadyCallback {
+public class Form4Fragment extends Fragment implements Step {
+    View v;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.form2_fragment, container, false);
-    }
+        v =  inflater.inflate(R.layout.form4_fragment, container, false);
 
+        return v;
+    }
 
     @Nullable
     @Override
@@ -36,11 +37,6 @@ public class Form2Fragment extends Fragment implements Step , OnMapReadyCallback
 
     @Override
     public void onError(@NonNull VerificationError error) {
-
-    }
-
-    @Override
-    public void onMapReady(GoogleMap googleMap) {
 
     }
 }
