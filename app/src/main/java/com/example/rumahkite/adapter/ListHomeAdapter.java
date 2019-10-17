@@ -43,11 +43,26 @@ public class ListHomeAdapter extends RecyclerView.Adapter<ListHomeAdapter.ListVi
         Home home = listHome.get(position);
         Glide.with(holder.itemView.getContext())
                 .load(home.getFoto())
-                .apply(new RequestOptions().override(55,55))
+                .apply(new RequestOptions())
                 .into(holder.imgHome);
-        holder.tvType.setText(home.getType_home());
+        holder.tvElectry.setText(home.getElectric());
+        holder.tvFloor.setText(home.getFloor());
+        holder.tvGarden.setText(home.getGarden());
+        holder.tvLandsize.setText(home.getLandsize());
+        holder.tvSince.setText(home.getSince());
+        holder.tvKecamatan.setText(home.getKecamatan());
+        holder.tvSale.setText(home.getmSale());
+        holder.tvJarak.setText(home.getKilojarak());
+        holder.tvProperty.setText(home.getProperty());
         holder.tvPrice.setText(home.getHarga());
         holder.tvDesc.setText(home.getDeskripsi());
+        holder.tvType.setText(home.getType_home());
+        holder.tvAgent.setText(home.getNamaAgent());
+        holder.tvBath.setText(home.getkBath());
+        holder.tvBed.setText(home.getkSleep());
+        holder.tvFacility.setText(home.getHomeFacility());
+        holder.tvCertificate.setText(home.getTipeSertifikat());
+        holder.tvAlamat.setText(home.getAlamat());
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -63,13 +78,30 @@ public class ListHomeAdapter extends RecyclerView.Adapter<ListHomeAdapter.ListVi
 
      class ListViewHolder extends RecyclerView.ViewHolder {
             ImageView imgHome;
-            TextView tvType, tvPrice, tvDesc;
+            TextView tvProperty, tvPrice, tvDesc, tvJarak, tvSale, tvKecamatan,
+                     tvType, tvAgent, tvBed, tvBath, tvFacility, tvCertificate,
+                     tvAlamat, tvLandsize, tvElectry, tvFloor, tvGarden, tvSince;
 
             ListViewHolder(View itemView) {
                 super(itemView);
+                tvSince = itemView.findViewById(R.id.tv_since);
+                tvGarden = itemView.findViewById(R.id.tv_garden);
+                tvFloor = itemView.findViewById(R.id.tv_floor);
+                tvElectry = itemView.findViewById(R.id.tv_electry);
+                tvLandsize = itemView.findViewById(R.id.tv_landsize);
+                tvAlamat = itemView.findViewById(R.id.tv_alamat);
+                tvCertificate = itemView.findViewById(R.id.tipe_sertifikat);
+                tvFacility = itemView.findViewById(R.id.fasilitas);
+                tvBath = itemView.findViewById(R.id.kamar_mandi);
+                tvBed = itemView.findViewById(R.id.kamar_tidur);
+                tvAgent = itemView.findViewById(R.id.tv_agent);
                 imgHome = itemView.findViewById(R.id.img_item_photo);
                 tvType = itemView.findViewById(R.id.type);
+                tvProperty = itemView.findViewById(R.id.tv_property);
                 tvPrice = itemView.findViewById(R.id.tv_harga);
+                tvJarak = itemView.findViewById(R.id.jarak);
+                tvSale = itemView.findViewById(R.id.sale);
+                tvKecamatan = itemView.findViewById(R.id.kecamatan);
                 tvDesc = itemView.findViewById(R.id.tv_deskripsi);
             }
     }

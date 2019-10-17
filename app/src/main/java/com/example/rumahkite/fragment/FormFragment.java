@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -26,7 +27,8 @@ public class FormFragment extends Fragment implements Step {
     View v;
     private DatePickerDialog datePickerDialog;
     private SimpleDateFormat dateFormatter;
-    private EditText EtDateResult;
+    private EditText EtDateResult, EtHari, EtDesc;
+    private TextView TvHari, TvDate, TvDesc, TvCaption, TvHarga1, TvHr;
     private ImageView btDatePicker;
 
     @Nullable
@@ -39,9 +41,27 @@ public class FormFragment extends Fragment implements Step {
         dateFormatter = new SimpleDateFormat("dd-MM-yyyy", Locale.US);
         EtDateResult = v.findViewById(R.id.date);
         btDatePicker = v.findViewById(R.id.dateIc);
+        EtHari = v.findViewById(R.id.etHari);
+        EtDesc = v.findViewById(R.id.etDesc);
+        TvHari = v.findViewById(R.id.tvHari);
+        TvDate = v.findViewById(R.id.tvDate);
+        TvDesc = v.findViewById(R.id.tvDesc);
+        TvCaption = v.findViewById(R.id.captionform1);
+        TvHarga1 = v.findViewById(R.id.tv_harga1);
+        TvHr = v.findViewById(R.id.hr);
+
 
         Typeface font = Typeface.createFromAsset(getActivity().getAssets(), "font/TitilliumWeb-SemiBold.ttf");
-        EtDateResult.setTypeface(font);
+        Typeface font2 = Typeface.createFromAsset(getActivity().getAssets(), "font/TitilliumWeb-Regular.ttf");
+        EtDateResult.setTypeface(font2);
+        EtDesc.setTypeface(font2);
+        EtHari.setTypeface(font2);
+        TvHari.setTypeface(font);
+        TvDesc.setTypeface(font);
+        TvDate.setTypeface(font);
+        TvCaption.setTypeface(font);
+        TvHarga1.setTypeface(font);
+        TvHr.setTypeface(font);
 
         btDatePicker.setOnClickListener(new View.OnClickListener() {
             @Override

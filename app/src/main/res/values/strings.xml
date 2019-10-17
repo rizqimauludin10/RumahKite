@@ -34,4 +34,13 @@
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
+    <string name="descThree">Tarif diatas adalah biaya minimum jasa RumahKite yaitu Tukang Atap maksimal 8 jam kerja/hari</string>
+    <string name="descFour">Perbaikan minor atau pemasangan instalasi lebih dari 8 jam kerja/hari, RumahKite akan mengajukan tambahan biaya pekerjaan melalui Aplikasi</string>
+    <string name="descFive">Apabila ada penambahan biaya (pembelian material, penambahan tenaga kerja, penambahan durasi kerja), RumahKite akan mengajukan penawaran melalui Aplikasi</string>
+    <string name="descSix">Untuk pekerjaan lainnya, silahkan memilih Layanan Survey dan Konsultasi, RumahKite akan memberikan Penawaran Harga sesuai dengan kebutuhan anda</string>
+    <string name="descSeven">Jika anda membatalkan pesanan setelah Tukang RumahKite tiba di lokasi pekerjaan, </string>
+    <string name="descEight">maka Anda dikarenakan biaya pembatalan sebesar Rp 50.000 </string>
+    <string name="descNine">Dengan menekan "Lanjut" saya menyetujui</string>
+    <string name="descTen"> Syarat dan Ketentuan</string>
+    <string name="descEleven">yang berlaku</string>
 </resources>
