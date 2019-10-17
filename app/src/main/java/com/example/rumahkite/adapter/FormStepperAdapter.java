@@ -10,6 +10,7 @@ import androidx.fragment.app.FragmentManager;
 import com.example.rumahkite.R;
 import com.example.rumahkite.fragment.Form2Fragment;
 import com.example.rumahkite.fragment.Form3Fragment;
+import com.example.rumahkite.fragment.Form4Fragment;
 import com.example.rumahkite.fragment.FormFragment;
 import com.example.rumahkite.model.FormModelStepper;
 import com.google.android.gms.location.ActivityRecognitionResult;
@@ -61,6 +62,11 @@ public class FormStepperAdapter extends AbstractFragmentStepAdapter {
             case 2:
                 final Form3Fragment form3Fragment = new Form3Fragment();
                 step = form3Fragment;
+                break;
+
+            case 3:
+                final Form4Fragment form4Fragment = new Form4Fragment();
+                step = form4Fragment;
 
             default:
 
@@ -72,7 +78,7 @@ public class FormStepperAdapter extends AbstractFragmentStepAdapter {
 
     @Override
     public int getCount() {
-        return 3;
+        return 4;
     }
 
 /*    @NonNull
